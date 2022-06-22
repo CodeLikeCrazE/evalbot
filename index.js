@@ -1,7 +1,7 @@
 import { Wasteof2Auth, Wasteof2 } from 'wasteof-client'
 
-let username = 'jeffalo';
-let password = 'bacon';
+let username = 'evalbot';
+let password = 'badpassword';
 const wasteof = new Wasteof2Auth(username, password);
 const wastatic = new Wasteof2();
 
@@ -29,8 +29,10 @@ async function replyToComment(comment) {
     if (!data[0]) return;
     if (data[0].poster.name == username) responded = true;
   })
+	
+  var evalResult = eval(content.split("@"+username).join(""));
 
   /* DO STUFF HERE */
   if (responded) return; // if the bot already responded to the comment, stop the function
-  wasteof.postWallComment(username, "Message content here...", commentid); // reply to the comment
+  wasteof.postWallComment(username, evalResult, commentid); // reply to the comment
 }
