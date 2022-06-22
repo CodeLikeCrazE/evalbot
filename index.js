@@ -34,7 +34,7 @@ async function replyToComment(comment) {
 try {
 
 	
-  var evalResult = eval(content.split("@"+username).join("").split("<p>").join("").split("</p>").join(""));
+  var evalResult = eval(content.slice(3,content.length-6));
 } catch (e) {
 	var evalResult = e;
 }
