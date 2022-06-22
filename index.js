@@ -38,6 +38,9 @@ try {
 } catch (e) {
 	var evalResult = e;
 }
+	if (!evalResult) {
+		evalResult = "You didn't return anything!";
+	}
 	console.log(evalResult);
 	
 
