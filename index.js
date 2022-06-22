@@ -10,6 +10,7 @@ wasteof.listen(async (event) => {
     if (event.type == 'updateMessageCount') {
 	await wastatic.getWallComments(username, 0)
 	    .then(data => {
+		console.log("updating");
 		replyToComment(data.comments[0]);
 	    });
     }
@@ -37,6 +38,8 @@ try {
 } catch (e) {
 	var evalResult = e;
 }
+	console.log(evalResult);
+	
 
   /* DO STUFF HERE */
   if (responded) return; // if the bot already responded to the comment, stop the function
