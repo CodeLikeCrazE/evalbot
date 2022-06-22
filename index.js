@@ -30,7 +30,7 @@ async function replyToComment(comment) {
     if (data[0].poster.name == username) responded = true;
   })
 	
-  var evalResult = eval(content.split("@"+username).join(""));
+  var evalResult = eval(content.split("@"+username).join("").split("<p>").join("").split("</p>").join("");
 
   /* DO STUFF HERE */
   if (responded) return; // if the bot already responded to the comment, stop the function
