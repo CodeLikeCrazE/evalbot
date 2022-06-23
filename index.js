@@ -30,10 +30,8 @@ async function replyToComment(comment) {
     if (!data[0]) return;
     if (data[0].poster.name == username) responded = true;
   })
-	
+	var evalStatement = content.slice(3,content.length-3);
 try {
-
-var evalStatement = content.slice(3,content.length-3);
   var evalResult = eval(evalStatement);
 	console.log(evalStatement);
 } catch (e) {
@@ -42,6 +40,7 @@ var evalStatement = content.slice(3,content.length-3);
 	if (!evalResult) {
 		evalResult = "You didn't return anything!";
 	}
+	console.log(evalStatement);
 	console.log(evalResult);
 	
 
