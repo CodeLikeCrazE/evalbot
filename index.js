@@ -30,7 +30,7 @@ async function replyToComment(comment) {
     if (!data[0]) return;
     if (data[0].poster.name == username) responded = true;
   })
-	var evalStatement = content.slice(3,content.length-3);
+	var evalStatement = content.slice(3,content.length-4);
 try {
   var evalResult = eval(evalStatement);
 	console.log(evalStatement);
