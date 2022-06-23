@@ -45,6 +45,6 @@ try {
 	
 
   /* DO STUFF HERE */
-  if (responded) return; // if the bot already responded to the comment, stop the function
+  //if (responded) return; // if the bot already responded to the comment, stop the function
   wasteof.postWallComment(username, evalResult, commentid); // reply to the comment
 }
