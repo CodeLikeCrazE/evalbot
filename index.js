@@ -31,7 +31,9 @@ async function replyToComment(comment) {
     if (data[0].poster.name == username) responded = true;
   })
 	var evalStatement = content.slice(3,content.length-4).split("</p><p>").join("\n").split("&lt;").join("<").split("&gt;").join(">").split("—").join("--");
-try {
+	delete require;
+	delete import;
+	try {
   var evalResult = eval(evalStatement);
 	console.log(evalStatement);
 } catch (e) {
