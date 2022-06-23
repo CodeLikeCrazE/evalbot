@@ -34,7 +34,7 @@ async function replyToComment(comment) {
 try {
 
 	
-  var evalResult = eval(content.slice(3,content.length-6));
+  var evalResult = eval(content.slice(3,content.length-3));
 } catch (e) {
 	var evalResult = e;
 }
